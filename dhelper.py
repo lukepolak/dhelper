@@ -801,7 +801,7 @@ def mkFacStr(fcolors, *ccosts):
 def loadCards():
   fn = CFG['cards']['filename']
   cards = {}
-  with open(fn, 'r') as fp:
+  with open(fn, 'r', encoding='utf-8') as fp:
     csvr = csv.reader(fp)
     for row in csvr:
       if len(row) < 19 or row[0] == 'Reg':
